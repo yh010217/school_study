@@ -79,11 +79,13 @@ header>#login_page>p{
     display: flex;
 }
 .container>#inner_tab{
-    /*width:20%;*/
     min-height: 550px;
     position: relative;
     top:2vw;
     flex-grow: 0;
+
+
+    flex-basis:170px;
 }
 
 .container>#inner_tab>h5{
@@ -139,13 +141,22 @@ header>#login_page>p{
 }
 
 .container>#main_section>img{
-    width: 100%;
+    height: 100%;
 }
 
 /*여기까지 main_section*/
 
 .container>.advertise_right{
-    width:100px;
-    flex-grow: 0;
-    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 30px;
+}
+
+.showAd{
+    height: 100%;
+    background-color: lightskyblue;
+    min-width: 100px;
+    max-width: 100px;
 }
