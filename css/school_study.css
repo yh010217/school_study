@@ -1,0 +1,151 @@
+body{
+    margin : 0;
+}
+#head_cont{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+header{
+    width : 100%;
+    height : 30px;
+    border-bottom: 1px solid silver;
+    padding : 2vh 0;
+    display: flex;
+    justify-content: space-between;
+
+    flex-grow: 0;/*head_cont 에 대한 flex-grow*/
+}
+#title{
+    height: 100%;
+    width : 155px;
+    padding-left: 15px;
+    display: inline-block;
+}
+#title> img[src$="milkT.jpg"]{
+    display: inline-block;
+    width: auto;
+    height: 100%;
+}
+#title> p{
+    display: inline-block;
+    color: #434343;
+    margin : 0;
+    font-size: 1.3rem;
+    position:relative;
+    top : -8px;
+    font-weight: 900;
+}
+header>nav{
+    display: inline-block;
+    width : 70%;
+}
+header>nav>ul{
+    list-style: none;
+    padding-left: 0;
+    position:relative;
+    top:-8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+header>nav>ul>li {
+    display: inline-block;
+    font-weight: 700;
+    color: #393939;
+}
+header>#login_page>p{
+    width:120px;
+    border:2px solid blue;
+    color: blue;
+    margin-right: 15px;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    top:-15px;
+}
+
+
+
+/*위에까지가 헤더*/
+
+.container{
+    flex-grow: 1;/*head_cont 에 대한 flex-grow*/
+
+    border : 2px solid silver;
+    /*height: 85vh;*/
+    overflow: hidden;
+    display: flex;
+}
+.container>#inner_tab{
+    /*width:20%;*/
+    min-height: 550px;
+    position: relative;
+    top:2vw;
+    flex-grow: 0;
+}
+
+.container>#inner_tab>h5{
+    margin:0;
+}
+.container>#inner_tab>nav>ul{
+    /*display: inline-block;*/
+    width:170px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 10px;
+    border-right: 0.8rem solid silver;
+}
+
+.container>#inner_tab>nav>ul>li{
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    display: flex;
+}
+.container>#inner_tab>nav>ul>li>img{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+}
+.container>#inner_tab>nav>ul>li>p{
+    width:100px;
+    text-align: center;
+    margin:auto auto;
+}
+
+/*여기까지가 inner tab*/
+
+.container>#main_section{
+    background-color: antiquewhite;
+    flex-grow: 1;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.container>#main_section::-webkit-scrollbar{
+    width:8px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+.container>#main_section::-webkit-scrollbar-thumb{
+    width:7px;
+    background-color: lightskyblue;
+    border-radius: 5px;
+}
+
+.container>#main_section>img{
+    width: 100%;
+}
+
+/*여기까지 main_section*/
+
+.container>.advertise_right{
+    width:100px;
+    flex-grow: 0;
+    background-color: antiquewhite;
+}
