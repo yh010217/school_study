@@ -78,20 +78,42 @@ header>#login_page>p{
     overflow: hidden;
     display: flex;
 }
-.container>#inner_tab{
-    min-height: 550px;
+
+/*inner tab 시작*/
+.container>.inner_tab_wrap{
+    width:0;
+    background-color: antiquewhite;
+}
+
+.inner_tab_wrap_open{
+    min-width: 180px;
+}
+.inner_tab_open{
+    transform:translateY(290px);
+    transition-duration: 1s;
+}
+.inner_tab_close{
+    transform:translateY(-290px);
+    transition-duration: 1s;
+}
+
+
+.container>.inner_tab_wrap>.inner_tab{
+    min-height: 580px;
+    width:170px;
     position: relative;
-    top:2vw;
+    top:-290px;
+
     flex-grow: 0;
 
 
     flex-basis:170px;
 }
 
-.container>#inner_tab>h5{
+.container>.inner_tab_wrap>.inner_tab>h5{
     margin:0;
 }
-.container>#inner_tab>nav>ul{
+.container>.inner_tab_wrap>.inner_tab>nav>ul{
     /*display: inline-block;*/
     width:170px;
     list-style: none;
@@ -99,27 +121,33 @@ header>#login_page>p{
     flex-direction: column;
     padding-left: 0;
     padding-right: 10px;
-    border-right: 0.8rem solid silver;
 }
 
-.container>#inner_tab>nav>ul>li{
+.container>.inner_tab_wrap>.inner_tab>nav>ul>li{
     height: 70px;
     border: 2px solid black;
     border-radius: 15px;
     margin-bottom: 5px;
     display: flex;
 }
-.container>#inner_tab>nav>ul>li>img{
+.container>.inner_tab_wrap>.inner_tab>nav>ul>li>img{
     height: 70px;
     width: 70px;
     display: inline-block;
 }
-.container>#inner_tab>nav>ul>li>p{
+.container>.inner_tab_wrap>.inner_tab>nav>ul>li>p{
     width:100px;
     text-align: center;
     margin:auto auto;
 }
-
+.container>.inner_tab_wrap>.inner_tab>#inner_tab_button{
+    width: 100%;
+    height: 10px;
+    background-color: lightgrey;
+}
+#nyangi>img{
+    width:90px;
+}
 /*여기까지가 inner tab*/
 
 .container>#main_section{
@@ -127,11 +155,12 @@ header>#login_page>p{
     flex-grow: 1;
     text-align: center;
     overflow-y: scroll;
+
 }
 
 .container>#main_section::-webkit-scrollbar{
     width:8px;
-    background-color: lightgrey;
+    background-color: antiquewhite;
     border-radius: 5px;
 }
 .container>#main_section::-webkit-scrollbar-thumb{
@@ -142,21 +171,37 @@ header>#login_page>p{
 
 .container>#main_section>img{
     height: 100%;
+    width:auto;
+
 }
 
 /*여기까지 main_section*/
 
+#advertise_right_button{
+    position: fixed;
+    right:0
+}
+#advertise_right_button>img{
+    width:50px;
+    height: 50px;
+}
+#advertise_right_button>p{
+    text-align: center;
+}
+
+
+
 .container>.advertise_right{
     display: flex;
+    width:0;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    max-width: 30px;
 }
 
 .showAd{
     height: 100%;
-    background-color: lightskyblue;
+    background-color: antiquewhite;
     min-width: 100px;
     max-width: 100px;
 }
